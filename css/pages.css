@@ -1,1 +1,45 @@
+html, body {
+    background-color: #f8f8f8;
+}
 
+.main-menu {
+    padding-left: 15%;
+    padding-right: 15%; 
+    background-color: #fff; 
+}
+
+.nav-link {
+    color: darkblue;
+    font-weight: 600;
+}
+
+.nav a:hover {
+    color: #fff;
+    background-color: darkblue;
+}
+
+.container {
+    padding-top: 1%;
+    padding-bottom: 2%;
+    margin: 2% 15% 2% 15%;
+}
+
+.password-label {
+    position: relative;     
+}
+
+.password-label label {
+   margin: 0;
+   position: absolute;               
+   top: 50%;                         
+   transform: translate(0, -50%); 
+}
+
+.customers {
+    margin-top: 5em;
+}
+
+.customer-card {
+    margin-bottom: 1.5em;
+    margin-top: 1em;
+}
