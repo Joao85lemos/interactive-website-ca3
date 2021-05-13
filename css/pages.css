@@ -66,6 +66,10 @@ html, body {
     margin-bottom: 0.3em;
 }
 
+.password-check {
+    margin-bottom: 1em;
+}
+
 .content {
     padding-left: 0;
 }
