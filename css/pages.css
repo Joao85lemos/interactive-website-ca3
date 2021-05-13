@@ -29,10 +29,10 @@ html, body {
 }
 
 .password-label label {
-   margin: 0;
-   position: absolute;               
-   top: 50%;                         
-   transform: translate(0, -50%); 
+    margin: 0;
+    position: absolute;               
+    top: 50%;                         
+    transform: translate(0, -50%); 
 }
 
 .customers {
@@ -76,4 +76,20 @@ html, body {
 
 .quantity-content {
     margin-bottom: 0.1em;
+}
+
+#form-total {
+    margin-top: 3em;
+}
+
+.button-calculate {
+    position: relative;     
+}
+
+.button-calculate button {
+    width: 90%;
+    margin: 0;
+    position: absolute;               
+    top: 75%;                         
+    transform: translate(0, -50%); 
 }
