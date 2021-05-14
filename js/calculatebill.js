@@ -1,7 +1,9 @@
+$(document).ready(cleanFields());
+
 function verifyCheckBox() {
     var check = document.getElementsByName("checkStarter"); 
     
-    cleanFields();
+    //cleanFields();
 
     for (var i=0;i<check.length;i++){ 
         if (check[i].checked == true){ 
