@@ -2,34 +2,34 @@ $(document).ready(cleanFields());
 
 function verifyCheckBox() {
     var check = document.getElementsByName("checkStarter"); 
-    
-    //cleanFields();
-
     for (var i=0;i<check.length;i++){ 
         if (check[i].checked == true){ 
             calculateStartersPrices(i);
         }  
     }
     
+    check = document.getElementsByName("checkMain"); 
     for (var i=0;i<check.length;i++){ 
         if (check[i].checked == true){ 
             calculateMainPrices(i);
         }  
     }
     
+    check = document.getElementsByName("checkDessert"); 
     for (var i=0;i<check.length;i++){ 
         if (check[i].checked == true){ 
             calculateDessertsPrices(i);
         }  
     }
     
+    check = document.getElementsByName("checkdrink"); 
     for (var i=0;i<check.length;i++){ 
         if (check[i].checked == true){ 
             calculateDrinksPrices(i);
         }  
     }
     
-    calculateTotalBill()
+    calculateTotalBill();
 }
 
 function calculateTotalBill() {
@@ -81,7 +81,7 @@ function calculateStartersPrices(checkBox) {
             } else {
                 vegetarian += price * quantity;
             }             
-            document.getElementById("totalStarters").value = quantity * price;
+            document.getElementById("totalStarters").value = total + (quantity * price);
             document.getElementById("totalVegetarian").value = vegetarian;
             break;
         case 3:
@@ -92,7 +92,7 @@ function calculateStartersPrices(checkBox) {
             } else {
                 nonvegetarian += quantity * price;
             }             
-            document.getElementById("totalStarters").value = quantity * price;
+            document.getElementById("totalStarters").value = total + (quantity * price);
             document.getElementById("totalNonVegetarian").value = nonvegetarian;
             break;
         case 4:
@@ -103,7 +103,7 @@ function calculateStartersPrices(checkBox) {
             } else {
                 nonvegetarian += quantity * price;
             }             
-            document.getElementById("totalStarters").value = quantity * price;
+            document.getElementById("totalStarters").value = total + (quantity * price);
             document.getElementById("totalNonVegetarian").value = nonvegetarian;
             break;
     }
@@ -149,7 +149,7 @@ function calculateMainPrices(checkBox) {
             } else {
                 vegetarian += price * quantity;
             }             
-            document.getElementById("totalMain").value = quantity * price;
+            document.getElementById("totalMain").value = total + (quantity * price);
             document.getElementById("totalVegetarian").value = vegetarian;
             break;
         case 3:
@@ -159,8 +159,8 @@ function calculateMainPrices(checkBox) {
                 quantity = 0;
             } else {
                 nonvegetarian += price * quantity;
-            }             
-            document.getElementById("totalMain").value = quantity * price;
+            }
+            document.getElementById("totalMain").value = total + (quantity * price);
             document.getElementById("totalNonVegetarian").value = nonvegetarian;
             break;
         case 4:
@@ -171,7 +171,7 @@ function calculateMainPrices(checkBox) {
             } else {
                 nonvegetarian += price * quantity;
             }             
-            document.getElementById("totalMain").value = quantity * price;
+            document.getElementById("totalMain").value = total + (quantity * price);
             document.getElementById("totalNonVegetarian").value = nonvegetarian;
             break;
     }
@@ -207,7 +207,7 @@ function calculateDessertsPrices(checkBox) {
             if (quantity < 0 || isNaN(quantity)) {
                 quantity = 0;
             }            
-            document.getElementById("totalDessert").value = quantity * price;
+            document.getElementById("totalDessert").value = total + (quantity * price);
             break;
         case 3:
             price = setPrices(checkBox + 11);
@@ -215,7 +215,7 @@ function calculateDessertsPrices(checkBox) {
             if (quantity < 0 || isNaN(quantity)) {
                 quantity = 0;
             }              
-            document.getElementById("totalDessert").value = quantity * price;
+            document.getElementById("totalDessert").value = total + (quantity * price);
             break;
         case 4:
             price = setPrices(checkBox + 11);
@@ -223,7 +223,7 @@ function calculateDessertsPrices(checkBox) {
             if (quantity < 0 || isNaN(quantity)) {
                 quantity = 0;
             }             
-            document.getElementById("totalDessert").value = quantity * price;
+            document.getElementById("totalDessert").value = total + (quantity * price);
             break;
     }
 }
@@ -258,7 +258,7 @@ function calculateDrinksPrices(checkBox) {
             if (quantity < 0 || isNaN(quantity)) {
                 quantity = 0;
             }             
-            document.getElementById("totalDrinks").value = quantity * price;
+            document.getElementById("totalDrinks").value = total + (quantity * price);
             break;
         case 3:
             price = setPrices(checkBox + 16);
@@ -266,7 +266,7 @@ function calculateDrinksPrices(checkBox) {
             if (quantity < 0 || isNaN(quantity)) {
                 quantity = 0;
             }            
-            document.getElementById("totalDrinks").value = quantity * price;
+            document.getElementById("totalDrinks").value = total + (quantity * price);
             break;
         case 4:
             price = setPrices(checkBox + 16);
@@ -274,7 +274,7 @@ function calculateDrinksPrices(checkBox) {
             if (quantity < 0 || isNaN(quantity)) {
                 quantity = 0;
             }            
-            document.getElementById("totalDrinks").value = quantity * price;
+            document.getElementById("totalDrinks").value = total + (quantity * price);
             break;
     }
 }
